@@ -16,4 +16,7 @@ class PagesController < ApplicationController
 
   def call_or_visit
   end
+
+  def faq
+  end
 end
