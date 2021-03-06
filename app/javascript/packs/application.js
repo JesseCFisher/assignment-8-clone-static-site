@@ -7,16 +7,16 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-import "bootstrap"
+import 'bootstrap'
 
 document.addEventListener("turbolinks:load", () => {
-  $('[data-toggle="tooltip"]').tooltip()
-  $('[data-toggle="popover"]').popover()
-  // $('[data-toggle="dropdown"]').dropdown()
   window.onerror = function(msg, url, linenumber) {
       alert('Error message: '+msg+'\nURL: '+url+'\nLine Number: '+linenumber);
       return true;
   }
+  // $('[data-toggle="tooltip"]').tooltip()
+  // $('[data-toggle="popover"]').popover()
+  // $('[data-toggle="dropdown"]').dropdown()
 
 })
 
