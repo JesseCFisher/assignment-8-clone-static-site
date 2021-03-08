@@ -1,6 +1,19 @@
 nav.prenav
   background-color: #8d7249
-
+  font-weight: bold
+  text-transform: uppercase
+  .nav-link
+    color: white
+  .navbar-nav
+    position: absolute
+    z-index: 1000
+    right: 0
+    background-color: #8d7249
+.prenav-trigger:focus
+  background: pink
+#navbarPreNav 
+  .nav-item
+    padding: 0 1em
 nav.primary-nav
   // max-height: 10em
   .logo
@@ -20,8 +33,20 @@ nav.primary-nav
 
   #navbarNav
     z-index: 110
-    ul
+    // ul
       background: $light
 
 .dropdown-custom
   left: -29px
+
+.carousel .carousel-item
+  height: 600px
+
+
+.carousel-item img 
+    // position: absolute
+    object-fit: cover
+    // top: 0
+    // left: 0
+    height: 600px
+    // transform: scale(1.8, 1.4)

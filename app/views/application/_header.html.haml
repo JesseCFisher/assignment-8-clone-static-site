@@ -1,17 +1,16 @@
-%nav.prenav.navbar.navbar-expand-md.navbar-dark
-  %ul.navbar-nav.ms-auto
-    %li.nav-item
-      %a.nav-link{:href => "/call-or-visit"} 503-252-7801
-    %li.nav-item.dropdown
-      %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{ "aria-expanded" => "false", "data-bs-toggle" => "dropdown", :href => "#", :role => "button"}
-        Online Orders
-      %ul.dropdown-menu.dropdown-custom{"aria-labelledby" => "navbarDropdownMenuLink"}
-        %li
-          %a.dropdown-item{:href => "#"} Curbside Pickup
-        %li
-          %a.dropdown-item{:href => "#"} Gift Cards
-        %li
-          %a.dropdown-item{:href => "#"} Gift Card Cart
+%nav.prenav.navbar.text-end
+  %span.nav-item
+    %a.nav-link{:href => "/call-or-visit"} 503-252-7801
+  %a.nav-link.prenav-trigger{"aria-controls" => "navbarPreNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarPreNav", "data-bs-toggle" => "collapse", :type => "button"}
+    Online Orders
+  #navbarPreNav.collapse.navbar-collapse
+    %ul.navbar-nav
+      %li.nav-item
+        %a.nav-link{:href => "#"} Curbside Pickup
+      %li.nav-item
+        %a.nav-link{:href => "#"} Gift Cards
+      %li.nav-item
+        %a.nav-link{:href => "#"} Gift Card Cart
 %nav.primary-nav.navbar.navbar-expand-md.navbar-light.bg-light
   -# %a.navbar-brand{:href => "#"} Navbar
   %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarNav", "data-bs-toggle" => "collapse", :type => "button"}
@@ -19,7 +18,7 @@
   .logo.d-sm-none
     = link_to image_tag('logo.png'), root_path 
   #navbarNav.collapse.navbar-collapse
-    %ul.navbar-nav.mx-auto
+    %ul.navbar-nav.mx-auto.bg-light
       %li.nav-item.active
         %a.nav-link{:href => "/"}
           Home
